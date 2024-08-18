@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Fume - Premium Perfumes</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #333;
+            line-height: 1.6;
+            background-color: #f5f5f5;
+        }
+
+        header {
+            background: #000;
+            color: #fff;
+            padding: 1rem;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: auto;
+            padding: 0 1rem;
+        }
+
+        header h1 {
+            font-size: 1.5rem;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-left: 1rem;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #ccc;
+        }
+
+        #about {
+            padding: 4rem 1rem;
+            text-align: center;
+            background: #fff;
+            margin-top: 4rem; /* Adjust for fixed header */
+        }
+
+        #about h2 {
+            margin-bottom: 1rem;
+            font-size: 2rem;
+            font-weight: 700;
+        }
+
+        #about .container {
+            max-width: 1200px;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        #about img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        #about p {
+            max-width: 800px;
+            margin: auto;
+            line-height: 1.8;
+            font-size: 1.1rem;
+        }
+
+        footer {
+            background: #000;
+            color: #fff;
+            text-align: center;
+            padding: 1rem;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            header .container {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            nav ul {
+                flex-direction: column;
+                margin-top: 1rem;
+            }
+
+            nav ul li {
+                margin: 0.5rem 0;
+            }
+        }
+
+        @media (max-width: 480px) {
+            #about h2 {
+                font-size: 1.5rem;
+            }
+
+            #about p {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Fume</h1>
+            <nav>
+                <ul>
+                    <li><a href="#hero">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#products">Products</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="about">
+        <div class="container">
+            <img src="image1.jpg" alt="nothing to see here just look away">
+            <h2>About Us</h2>
+            <p>Welcome to Fume, where we specialize in crafting and curating premium perfumes. Our mission is to provide you with a unique experience that exudes elegance and sophistication. Each fragrance in our collection is meticulously crafted using the finest ingredients, ensuring that you not only smell exceptional but also experience the luxury of our products.</p>
+            <p>Founded on the principles of quality and craftsmanship,Our commitment to excellence extends beyond our products; we strive to deliver exceptional customer service and a seamless experience. Whether you are searching for a signature scent or a special gift, Fume promises an unforgettable fragrance journey.</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Fume Perfumes. No rights reserved.</p>
+        <p>The site is powered by Doytak_Techz</p>
+    </footer>
+</body>
+</html>
