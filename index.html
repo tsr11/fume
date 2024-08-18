@@ -1,0 +1,328 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fume - Premium Perfumes</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        color: #333;
+        line-height: 1.6;
+        background-color: #f5f5f5;
+      }
+
+      header {
+        background: #000;
+        color: #fff;
+        padding: 1rem;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        z-index: 1000;
+      }
+
+      header .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1200px;
+        margin: auto;
+        padding: 0 1rem;
+      }
+
+      header h1 {
+        font-size: 1.5rem;
+      }
+
+      nav ul {
+        list-style: none;
+        display: flex;
+      }
+
+      nav ul li {
+        margin-left: 1rem;
+      }
+
+      nav ul li a {
+        color: #fff;
+        text-decoration: none;
+        font-weight: 600;
+        transition: color 0.3s;
+      }
+
+      nav ul li a:hover {
+        color: #ccc;
+      }
+
+      #hero {
+        background: url("https://images.unsplash.com/photo-1604879616509-d841eec0ca4e?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")
+          no-repeat center center/cover;
+        color: #fff;
+        padding: 8rem 1rem;
+        text-align: center;
+        position: relative;
+        height: 80vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      #hero h2 {
+        font-size: 3rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+        animation: fadeIn 2s ease-in-out;
+      }
+
+      #hero button {
+        background: #000;
+        color: #fff;
+        border: none;
+        padding: 0.75rem 2rem;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 1rem;
+        transition: background 0.3s, transform 0.3s;
+      }
+
+      #hero button:hover {
+        background: #333;
+        transform: scale(1.05);
+      }
+
+      #about {
+        padding: 4rem 1rem;
+        text-align: center;
+        background: #fff;
+      }
+
+      #about h2 {
+        margin-bottom: 1rem;
+        font-size: 2rem;
+        font-weight: 700;
+      }
+
+      #about p {
+        max-width: 800px;
+        margin: auto;
+        line-height: 1.8;
+      }
+
+      #products {
+        padding: 4rem 1rem;
+        background: #f9f9f9;
+      }
+
+      #products h2 {
+        text-align: center;
+        margin-bottom: 2rem;
+        font-size: 2rem;
+        font-weight: 700;
+      }
+
+      .product-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2rem;
+        justify-content: center;
+      }
+
+      .product {
+        background: #fff;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        padding: 1rem;
+        text-align: center;
+        width: 300px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s;
+      }
+
+      .product:hover {
+        transform: translateY(-5px);
+      }
+
+      .product img {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+        margin-bottom: 1rem;
+      }
+
+      .product h3 {
+        margin: 0.5rem 0;
+        font-size: 1.5rem;
+        font-weight: 600;
+      }
+
+      .product .price {
+        font-size: 1.25rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+      }
+
+      .product button {
+        background: #000;
+        color: #fff;
+        border: none;
+        padding: 0.75rem 1.5rem;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 1rem;
+        transition: background 0.3s, transform 0.3s;
+      }
+
+      .product button:hover {
+        background: #333;
+        transform: scale(1.05);
+      }
+
+      #contact {
+        padding: 4rem 1rem;
+        background: #fff;
+      }
+
+      #contact h2 {
+        text-align: center;
+        margin-bottom: 2rem;
+        font-size: 2rem;
+        font-weight: 700;
+      }
+
+      form {
+        max-width: 600px;
+        margin: auto;
+      }
+
+      form label {
+        display: block;
+        margin-bottom: 0.5rem;
+        font-weight: 600;
+      }
+
+      form input,
+      form textarea {
+        width: 100%;
+        padding: 0.75rem;
+        margin-bottom: 1rem;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+      }
+
+      form button {
+        background: #000;
+        color: #fff;
+        border: none;
+        padding: 0.75rem 1.5rem;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 1rem;
+        transition: background 0.3s, transform 0.3s;
+      }
+
+      form button:hover {
+        background: #333;
+        transform: scale(1.05);
+      }
+
+      footer {
+        background: #000;
+        color: #fff;
+        text-align: center;
+        padding: 1rem;
+        position: relative;
+        bottom: 0;
+        width: 100%;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <h1>Fume</h1>
+        <nav>
+          <ul>
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#products">Products</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <section id="hero">
+      <div>
+        <h2>Fume</h2>
+        <button>Shop Now</button>
+      </div>
+    </section>
+
+    <section id="about">
+      <h2>About Us</h2>
+      <p>
+        At Fume, we offer a curated selection of premium perfumes, crafted to
+        provide a unique and memorable scent experience. Each fragrance is a
+        blend of elegance and sophistication, using the finest ingredients to
+        ensure top-notch quality.
+      </p>
+    </section>
+
+    <section id="products">
+      <h2>Our Collection</h2>
+      <div class="product-list">
+        <div class="product">
+          <img src="unnamed.jpg" alt="Perfume 1" />
+          <h3>Elegance</h3>
+          <p>A sophisticated blend of floral and woody notes.</p>
+          <p class="price">Rs. 2200</p>
+          <button>Buy Now</button>
+        </div>
+        <div class="product">
+          <img src="unnamed.jpg" alt="Perfume 2" />
+          <h3>Radiance</h3>
+          <p>A vibrant fragrance with citrus and vanilla undertones.</p>
+          <p class="price">Rs. 3300</p>
+          <button>Buy Now</button>
+        </div>
+        <!-- place to "create" some more products i guess -->
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact Us</h2>
+      <form action="submit_form.php" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required />
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
+
+    <footer>
+      <p>&copy; 2024 Fume Perfumes. No rights reserved.</p>
+      <p>The side is powerd with // Doytak_Techz</p>
+    </footer>
+  </body>
+</html>
