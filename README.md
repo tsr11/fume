@@ -1,0 +1,1 @@
+The code works as fast as the intellect of doytak and soars as high as the hight of Keshav. The colors the website paints along the way is as colorfull as the school food. The sheer quality of the website design is brighter than the school toilet.
